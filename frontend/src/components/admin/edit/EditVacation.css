@@ -1,0 +1,124 @@
+.EditVacation {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    max-width: 640px;
+    margin: 2rem auto;
+    padding: 3rem 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.EditVacation h3 {
+    color: var(--text-primary);
+    font-size: 1.6rem;
+    margin: 0 0 1.25rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.EditVacation form {
+    display: grid;
+    gap: 0.9rem;
+}
+
+.EditVacation form label {
+    font-weight: 600;
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+}
+
+.EditVacation form input,
+.EditVacation form textarea,
+.EditVacation form select {
+    width: 100%;
+    padding: 0.65rem 0.8rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.98rem;
+    transition: var(--transition);
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--text-primary);
+}
+
+.EditVacation form input:focus,
+.EditVacation form textarea:focus,
+.EditVacation form select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+    transform: translateY(-2px);
+}
+
+.EditVacation form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.EditVacation form .formError {
+    color: var(--danger-color);
+    font-size: 0.8rem;
+    margin-top: 0.15rem;
+    min-height: 1rem;
+}
+
+.EditVacation form button {
+    background: linear-gradient(135deg, var(--warning-color) 0%, #d97706 100%);
+    color: white;
+    padding: 0.875rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow-md);
+}
+
+.EditVacation form button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.EditVacation form button:active {
+    transform: translateY(0);
+}
+
+.EditVacation form button[type="button"] {
+    background: var(--text-secondary);
+}
+
+.EditVacation form button[type="button"]:hover {
+    background: var(--text-primary);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .EditVacation {
+        padding: 2rem 1.5rem;
+        margin: 1rem;
+    }
+
+    .EditVacation h3 {
+        font-size: 1.5rem;
+    }
+
+    .EditVacation form {
+        gap: 1.2rem;
+    }
+}

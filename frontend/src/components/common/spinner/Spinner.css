@@ -1,0 +1,31 @@
+.Spinner {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.Spinner img {
+    height: 250px;
+    width: auto;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .Spinner img {
+        height: 150px;
+    }
+}

@@ -1,0 +1,51 @@
+.NotFound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background: transparent;
+}
+
+/* Container for the image to control sizing and animation */
+.NotFound img {
+    width: clamp(280px, 45vw, 880px);
+    max-width: 95%;
+    height: auto;
+    display: block;
+    border-radius: 14px;
+    box-shadow: 0 12px 36px rgba(12, 20, 30, 0.18);
+    object-fit: cover;
+    opacity: 0;
+    transform: translateY(12px) scale(0.995);
+    animation: nfFadeInUp 1220ms cubic-bezier(.2,.9,.2,1) 1 forwards;
+}
+
+@keyframes nfFadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Small subtle hover to indicate interactivity (optional) */
+.NotFound img:hover {
+    transform: translateY(-2px) scale(1.002);
+}
+
+/* Mobile adjustments - image takes more width on small screens */
+@media (max-width: 768px) {
+    .NotFound img {
+        width: clamp(240px, 70vw, 720px);
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 420px) {
+    .NotFound img {
+        width: 92vw;
+        border-radius: 10px;
+        box-shadow: 0 8px 24px rgba(12, 20, 30, 0.15);
+    }
+}

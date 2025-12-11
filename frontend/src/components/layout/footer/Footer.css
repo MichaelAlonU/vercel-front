@@ -1,0 +1,14 @@
+.Footer {
+    background: rgba(0, 0, 0, 0.4);
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.875rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.Footer:hover {
+    background: rgba(0, 0, 0, 0.5);
+    transition: var(--transition);
+}

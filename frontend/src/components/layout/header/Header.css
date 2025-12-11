@@ -1,0 +1,126 @@
+.Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 2rem;
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    box-shadow: var(--shadow-lg);
+    color: white;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.Header > div:first-child {
+    display: flex;
+    align-items: center;
+}
+
+.Header > div:first-child img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+
+.Header > div:first-child img:hover {
+    transform: scale(1.05);
+}
+
+.Header h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: -0.5px;
+}
+
+.Header nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.Header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: var(--transition);
+    position: relative;
+}
+
+.Header nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+.Header nav a.active {
+    color: #fbbf24;
+    background: rgba(251, 191, 36, 0.1);
+}
+
+.Header > div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+    font-weight: 500;
+}
+
+.Header > div:last-child button {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.Header > div:last-child button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Header {
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .Header > div:first-child {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .Header h1 {
+        font-size: 1.5rem;
+        width: 100%;
+    }
+
+    .Header nav {
+        justify-content: center;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .Header nav a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .Header > div:last-child {
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+    }
+}

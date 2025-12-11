@@ -1,0 +1,37 @@
+/* VacationReport.css */
+.vacation-report-container {
+  padding: 20px;
+  background-color: #f5f6fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.vacation-report-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.chart-wrapper {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.export-btn {
+  background-color: #4e79a7;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.export-btn:hover {
+  background-color: #3b5a80;
+}
