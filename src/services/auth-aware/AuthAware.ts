@@ -6,7 +6,7 @@ export default abstract class AuthAware {
 
     constructor(jwt: string, /*clientId: string*/) {
         this.axiosInstance = axios.create({
-            baseURL: import.meta.env.VITE_REST_SERVER_URL,
+            baseURL: "https://p01--vacations-backend-io--dbq6h7qyvd5d.code.run",
             headers: {
                 Authorization: `Bearer ${jwt}`,
                 // 'x-client-id': `${clientId}`
