@@ -11,7 +11,7 @@ export default function Header() {
     const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
     const isAdmin = useSelector((state: RootState) => state.auth.user?.isAdmin);
     const dispatch = useDispatch();
-    console.log("SERVER URL =", import.meta.env.VITE_REST_SERVER_URL, "https://p01--vacations-backend-io--dbq6h7qyvd5d.code.run");
+    console.log("SERVER URL =", import.meta.env.VITE_REST_SERVER_URL);
 
     return (
 
@@ -33,10 +33,6 @@ export default function Header() {
                         <NavLink to="/vacations">Vacations</NavLink>
                         {isAdmin && (
                             <>
-                                {/* &nbsp;|&nbsp;
-                                <NavLink style={{ color: "red" }} to="/add-vacation">
-                                    Add
-                                </NavLink> */}
 
                                 &nbsp;|&nbsp;
                                 <NavLink style={{ color: "red" }} to="/vacations/manage">

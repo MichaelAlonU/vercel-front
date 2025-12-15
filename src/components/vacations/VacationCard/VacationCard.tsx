@@ -75,12 +75,12 @@ export default function VacationCard({ vacation, currentUserId, isEditAllowed, i
             <img src={vacation.imageUrl} alt={vacation.destination} />
             <div className="card-content">
                 <h4>{vacation.destination} </h4>
-                <h6>                    <span className="date">{new Date(vacation.startTime).toLocaleDateString()} - {new Date(vacation.endTime).toLocaleDateString()}</span>
+                <h6>  <span className="date">{new Date(vacation.startTime).toLocaleDateString()} - {new Date(vacation.endTime).toLocaleDateString()}</span>
                 </h6>
                 <div className="card-info">
                     <span className="price">${vacation.price}</span>
                 </div>
-                <p>{vacation.description.substring(0, 50)}...</p>
+                <p>{vacation.description.substring(0, 200)}...</p>
             </div>
             <div className="card-footer">
                 {isLikeAllowed && <span className="followers-count">{vacation.followers?.length || 0} 👥</span>}

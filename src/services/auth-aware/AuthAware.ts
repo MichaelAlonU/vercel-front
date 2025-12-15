@@ -9,7 +9,6 @@ export default abstract class AuthAware {
             baseURL: "https://p01--vacations-backend-io--dbq6h7qyvd5d.code.run",
             headers: {
                 Authorization: `Bearer ${jwt}`,
-                // 'x-client-id': `${clientId}`
             }
         });
     }
