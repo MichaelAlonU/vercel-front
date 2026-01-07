@@ -3,6 +3,7 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
+    "homepage": "http://MichaelAlonU.github.io/vercel-front",
     "scripts": {
         "dev": "vite",
         "docker": "vite --mode docker",
@@ -10,7 +11,9 @@
         "build": "tsc -b && vite build --mode production",
         "qa": "tsc -b && vite build --mode qa",
         "lint": "eslint .",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist"
     },
     "dependencies": {
         "@hookform/resolvers": "^5.2.2",
@@ -40,6 +43,7 @@
         "eslint": "^9.33.0",
         "eslint-plugin-react-hooks": "^5.2.0",
         "eslint-plugin-react-refresh": "^0.4.20",
+        "gh-pages": "^6.3.0",
         "globals": "^16.3.0",
         "typescript": "~5.8.3",
         "typescript-eslint": "^8.39.1",
