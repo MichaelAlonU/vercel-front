@@ -7,7 +7,7 @@ import store from '../../redux/store';
 function App() {
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/vercel-front">
             <Provider store={store}>
                 <Layout />
             </Provider>
